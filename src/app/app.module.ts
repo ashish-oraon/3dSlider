@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
-
-// import { FlexLayoutModule } from '@angular/flex-layout';
-
-import {
-  SwiperModule, SwiperConfigInterface,
-  SWIPER_CONFIG
-} from 'ngx-swiper-wrapper';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { SwiperModule, SwiperConfigInterface, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { AppComponent } from './app.component';
 import { SlideshowComponent } from "./slideshow/slideshow.component";
+import { FormsModule } from '@angular/forms';
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -32,7 +30,12 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   imports: [
     SwiperModule,
     BrowserModule,
-    // FlexLayoutModule
+    BrowserAnimationsModule,
+    DropdownModule,
+    ButtonModule,
+    FormsModule,
+    DialogModule,
+    NgxDocViewerModule
   ],
   exports: [
   ],
